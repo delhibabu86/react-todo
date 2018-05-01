@@ -14,7 +14,7 @@ const style = {
   display: 'inline-block',
 };
 
-const apiUrl = 'http://5a8b8dea3d92490012370c03.mockapi.io/api/v1/todos';
+const apiUrl = 'https://5a8b8dea3d92490012370c03.mockapi.io/api/v1/todos';
 
 class App extends Component {
   constructor(props) {
