@@ -1,0 +1,24 @@
+git:
+  depth: 1
+language: node_js
+node_js:
+  - 8.8.0
+matrix:
+  fast_finish: true
+notifications:
+  email:
+    - delhibabu86@gmail.com
+branches:
+  only:
+    - master
+deploy:
+  provider: pages
+  github-token: "$GITHUB_TOKEN"
+  # Make sure you have skip_cleanup set to true, otherwise Travis CI will delete all the files created during the build, which will probably delete what you are trying to upload.
+  skip_cleanup: true
+  keep-history: true
+  on:
+    branch: master
+env:
+  global:
+         secure: "AumhFAYwJVr3/pPne2IWlkkqZI5CKBZMll835ie7g8Tjxh4TnHtFNOA8BPdKGhNeB8Vg9YoIGXrEnnfCxbM6x7EszmKLwbNgGZuqFaBk8+x9EAF9qD70Wui7dyDaWAE25E1E4oKmisVj+9pl6HZKcwkfnBbwNTC6+CiCx04UcEWFDkg2u1H7IiYOo/82PB7jxqEokiwX3o0i0A+VYSuFT+YO2UoVExmN0omeZF4GsE+MhqKNyirkGRx5PrDjb7dnH789Qwjb/kcmMkPQrqcRSSVs9cw9ts+V/TqwdAgdQHmXJSzhGqVMOATYrhvyk9OTMDHKyw05H92kyub7akBoO2PLI75SyxjJzo4nkuJdHJefoo4jc99FVOac2o5NFWFG2MQltJ1isHyNlX9Nmt9hpFNlKa2k2nLSrVDt3cCdbQtbZeTfKHdhfYoDQyOnCPwo8sJC/xmBEu1dYXTCDEHYZdZvDv94QGwVQcaTOl9IA5M7Up/baNpWQfjeNDjsuQydlIFBTeV1et/6XrWrGt7+oXmY7rLoEQvlwXHzNLQ1E79l8Eu7LiwbWUySrqgagVSVQqGojnveJPujQgvYFN0chvCARgDKc5vZQnGYj6O5nBVXtz0NOF4hrJ3aS9jPZgjOpgapfgIn2gVQYmw2oo1FCdi4C5Ov3tM+h2VmepiAvnk="
