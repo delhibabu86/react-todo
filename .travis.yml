@@ -11,6 +11,9 @@ notifications:
 branches:
   only:
     - master
+before_install:
+  - yarn install
+install: yarn build
 deploy:
   provider: pages
   github-token: "$GITHUB_TOKEN"
